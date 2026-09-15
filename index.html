@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Desenhos e Quadrinhos - Início</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Universo dos Desenhos e Quadrinhos</h1>
+        <p>Escolha um universo abaixo para explorar os personagens em tempo real via API!</p>
+    </header>
+
+    <main class="container">
+        <section class="grid-temas">
+            <!-- Card Rick and Morty -->
+            <div class="card-tema" onclick="selecionarTema('rickandmorty')">
+                <img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" alt="Rick and Morty">
+                <h2>Rick and Morty</h2>
+                <p>Explore dimensões e personagens loucos da série de animação.</p>
+                <button>Acessar Universo</button>
+            </div>
+
+            <!-- Card Pokémon -->
+            <div class="card-tema" onclick="selecionarTema('pokemon')">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png" alt="Pokémon">
+                <h2>Pokémon</h2>
+                <p>Descubra e pesquise sobre centenas de monstrinhos de bolso.</p>
+                <button>Acessar Universo</button>
+            </div>
+
+            <!-- Card Super Hero -->
+            <div class="card-tema" onclick="selecionarTema('superhero')">
+                <img src="https://www.superherodb.com/pictures2/portraits/10/100/639.jpg" alt="Super Hero">
+                <h2>Super Hero</h2>
+                <p>Heróis e vilões de múltiplos universos dos quadrinhos e TV.</p>
+                <button>Acessar Universo</button>
+            </div>
+
+            <!-- Card Simpsons -->
+            <div class="card-tema" onclick="selecionarTema('simpsons')">
+                <img src="https://upload.wikimedia.org/wikipedia/en/0/02/Homer_Simpson_2006.png" alt="Simpsons">
+                <h2>The Simpsons</h2>
+                <p>Conheça os habitantes de Springfield e suas histórias.</p>
+                <button>Acessar Universo</button>
+            </div>
+            
+            <!-- Card Marvel -->
+            <div class="card-tema" onclick="selecionarTema('marvel')">
+                <img src="https://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg" alt="Marvel">
+                <h2>Marvel Comics</h2>
+                <p>Heróis icônicos e dados diretamente do universo Marvel.</p>
+                <button>Acessar Universo</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Trabalho Acadêmico Front-End UniFECAF</p>
+    </footer>
+
+    <script src="script-home.js"></script>
+</body>
+</html>

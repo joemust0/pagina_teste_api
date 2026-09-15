@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Personagens - Consumo de API</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <button id="btn-voltar" onclick="window.location.href='index.html'">← Voltar aos Temas</button>
+        <h1 id="titulo-pagina">Carregando Universo...</h1>
+        <p id="subtitulo-pagina">Dados em tempo real consumidos via API</p>
+    </header>
+
+    <main class="container">
+        <section class="painel-controle">
+            <div class="grupo-busca">
+                <input type="text" id="input-busca" placeholder="Pesquisar personagem..." oninput="filtrarPersonagens()">
+            </div>
+            <div class="grupo-crud">
+                <button id="btn-abrir-modal" onclick="abrirModalCadastro()">+ Adicionar Personagem (CRUD)</button>
+            </div>
+        </section>
+        <section id="grid-cards" class="grid-cards">
+        </section>
+    </main>
+
+    <!-- Modal para Adicionar / Editar (CRUD) -->
+    <div id="modal-crud" class="modal oculto">
+        <div class="modal-conteudo">
+            <h2 id="modal-titulo">Adicionar Novo Personagem</h2>
+            <form id="form-personagem" onsubmit="salvarPersonagem(event)">
+                <input type="hidden" id="item-id">
+                
+                <label for="input-nome">Nome do Personagem:</label>
+                <input type="text" id="input-nome" required>
+
+                <label for="input-imagem">URL da Imagem:</label>
+                <input type="url" id="input-imagem" required>
+
+                <label for="input-status">Status / Descrição:</label>
+                <input type="text" id="input-status" required>
+
+                <div class="modal-botoes">
+                    <button type="button" onclick="fecharModalCadastro()">Cancelar</button>
+                    <button type="submit" id="btn-salvar">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>Projeto Desenvolvido com HTML, CSS e JavaScript Puro (Fetch API & DOM Manipulation)</p>
+    </footer>
+
+    <script src="script-detalhes.js"></script>
+</body>
+</html>
