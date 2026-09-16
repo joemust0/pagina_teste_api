@@ -3,5 +3,5 @@
  * @param {string} tema - Nome identificador da API/Universo
  */
 function selecionarTema(tema) {
-    window.location.href = detalhes.html?tema=$:{tema};
+    window.location.href = `detalhes.html?tema=${tema}`;
 }
